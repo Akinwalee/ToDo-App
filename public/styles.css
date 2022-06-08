@@ -18,6 +18,7 @@
   margin-bottom: 7px;
   position: relative;
   word-break: break-word;
+  list-style: none;
 }
 .todo-list li.danger {
   background: rgb(85, 41, 220);
@@ -235,4 +236,61 @@ a:hover {
 
 .todo-list input[type="checkbox"] {
   opacity: 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.item{
+  min-height: 70px;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid white;
+}
+
+.item:last-child{
+  border-bottom: 0;
+}
+
+
+p{
+  margin: 0;
+  padding: 20px;
+  font-size: 20px;
+  font-weight: 200;
+  color: #fff;
+}
+
+
+button{
+  min-height: 40px;
+  width: 50px;
+  border-radius: 50%;
+  border-color: transparent;
+  background-color: #fff;
+  color: #000;
+  font-size: 30px;
+  padding-bottom: 6px;
+  border-width: 0;
+}
+
+input[type = "chekbox"]{
+  margin: 20px;
+}
+
+input:checked+p{
+  text-decoration: line-through;
+  text-decoration-color: black;
 }
