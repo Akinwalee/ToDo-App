@@ -258,11 +258,13 @@ a:hover {
   display: flex;
   align-items: center;
   border-bottom: 1px solid white;
+
 }
 
 .item:last-child{
   border-bottom: 0;
 }
+
 
 
 p{
@@ -275,15 +277,16 @@ p{
 
 
 button{
-  min-height: 40px;
-  width: 50px;
-  border-radius: 50%;
-  border-color: transparent;
-  background-color: #fff;
-  color: #000;
-  font-size: 30px;
-  padding-bottom: 6px;
-  border-width: 0;
+    min-height: 24px;
+    width: 40px;
+    border-radius: 50%;
+    border-color: transparent;
+    background-color: #fff;
+    color: #000;
+    font-size: 30px;
+    padding-bottom: 0px;
+    border-width: 0;
+    margin-left: 10px;
 }
 
 input[type = "chekbox"]{
@@ -294,3 +297,27 @@ input:checked+p{
   text-decoration: line-through;
   text-decoration-color: black;
 }
+
+
+
+
+
+
+
+
+/* .todo p {
+  background: #fff;
+  border-radius: 5px;
+  margin-bottom: 7px;
+  position: relative;
+  word-break: break-word;
+}
+
+p {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+} */
