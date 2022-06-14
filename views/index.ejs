@@ -197,7 +197,6 @@
                     <div class="form-group has-feedback">
                       <form class="item" action="/" method="post">
                        <input type="text" name="newTask" class="form-control" placeholder="✍️ Add item..."/>
-                       <!-- <i class="fa fa-plus form-control-feedback add-btn" title="Add item"></i> -->
 
                        <button type="submit" name="buuton">+</button>
                       </form>
@@ -205,21 +204,6 @@
                  </div>
                  <p class="err text-danger text-center hidden"><i class="fa fa-warning"></i> Oops! Please, enter name item</p>
                  <p class="no-items text-muted text-center hidden"><i class="fa fa-ban"></i></p>
-                 <!-- <ul class="todo-list">
-                   <li>Hello world</li>
-                   <li>Write JavaScript</li>
-                 </ul> -->
-<!-- 
-                 <div class="item">
-                   <input type="checkbox" >
-                   <p>Hello World</p>
-                 </div>
-
-                 <div class="item">
-                    <input type="checkbox" >
-                    <p> <%= newItem %> </p>
-                  </div> -->
-
 
                  <% for(item of newItem){ %>
                     <div class="item todo">

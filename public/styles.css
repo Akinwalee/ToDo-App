@@ -297,27 +297,3 @@ input:checked+p{
   text-decoration: line-through;
   text-decoration-color: black;
 }
-
-
-
-
-
-
-
-
-/* .todo p {
-  background: #fff;
-  border-radius: 5px;
-  margin-bottom: 7px;
-  position: relative;
-  word-break: break-word;
-}
-
-p {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font-size: 100%;
-  font: inherit;
-  vertical-align: baseline;
-} */

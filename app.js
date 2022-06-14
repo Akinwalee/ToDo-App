@@ -102,10 +102,6 @@ app.get('/', (req, res) =>{
 
 
 // End of heading text function.
-
-
-
-
     
 
 })
