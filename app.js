@@ -1,3 +1,5 @@
+const { response } = require('express');
+
 const express = require('express'),
 app = express(),
 bodyParser = require('body-parser'),
@@ -16,39 +18,29 @@ let items = [];
 
 
 app.get('/', (req, res) =>{
-    // res.sendFile(__dirname + '/index.html');
 
 
+    // Getting Location Latitude and Longitude
+    const lonLatUrl = "https://geo.ipify.org/api/v2/country,city?apiKey=at_fhAg2YyOICFlHTipqaZBBAhy54Q1A&ipAddress=8.8.8.8";
+   https.get(lonLatUrl, (response)=>{
+    response.on("data", (data)=>{
+        const ipData = JSON.parse(data);
+        let lat = ipData.location.lat,
+        long = ipData.location.lng
 
-    // Function for getting the heading text
-
-    // navigator.geolocation.getCurrentPosition(function(position) {
-    //     let lat = position.coords.latitude;
-    //     let long = position.coords.longitude;
-    
-    //     console.log(lat , " ", long);
-
-        
-
-    let apiKey = "91271fb445cdec49736815ec23511568",
-    lat = 6.5306624,
-    long = 3.3521664,
-
+//    Getting Weather Data
+    let apiKey = "91271fb445cdec49736815ec23511568";
     url = `https://api.openweathermap.org/data/3.0/onecall?lat=${lat}&lon=${long}&unit=metric&appid=${apiKey}&lang=en&&exclude=hourly,daily`;
 
 
-    console.log(url)
-
     https.get(url, (response) => {
-
-
+    
         response.on("data", (data) => {
-        
 
         const weatherData = JSON.parse(data)
 
+        // Customize Wether Status Display
         let weatherStatus;
-        
 
         switch (weatherData.current.weather[0].main) {
             case "Clouds":
@@ -77,7 +69,7 @@ app.get('/', (req, res) =>{
         }
 
 
-         
+        // Get Current Date 
     const date = new Date(),
 
     options = {
@@ -86,10 +78,7 @@ app.get('/', (req, res) =>{
         month: "long"
         },
 
-    day = date.toLocaleDateString("en-US", options)
-
-    console.log(day);
-
+    day = date.toLocaleDateString("en-US", options);
 
     let message = `It's a ${weatherStatus} ${day}`;
 
@@ -99,47 +88,27 @@ app.get('/', (req, res) =>{
     })
 
 })
-
-
-// End of heading text function.
     
 
 })
 
 
+})
+    
 
-
-
-
-
-
-
-
-app.post("/", (req, res) => {
-    let item = req.body.newTask
-
-
-    items.push(item)
-
-    res.redirect("/")
 })
 
 
+// Handle Post Request
 
+app.post("/", (req, res) => {
+    let item = req.body.newTask
+    items.push(item)
+    res.redirect("/")
+})
 
-
-
-
-
+// Start Server
 
 app.listen(3000, (req, res) =>{
     console.log(`server is successfully running on port 3000`);
-
-
-
-
-
-
-
-
 })
