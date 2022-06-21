@@ -2,298 +2,286 @@
   background: #020631;
   font: 14px "Nunito", sans-serif;
 }
-.today {
-  font-size: 22px;
-}
-
-.container {
-  padding-top: 75px;
-}
-.todo-list {
-  margin: 20px 0;
-}
-.todo-list li {
-  background: #fff;
-  border-radius: 5px;
-  margin-bottom: 7px;
-  position: relative;
-  word-break: break-word;
-  list-style: none;
-}
-.todo-list li.danger {
-  background: rgb(85, 41, 220);
-}
-.todo-list li.danger label {
-  text-decoration: line-through;
-  color: #fff;
-}
-.todo-list li.danger label .checkbox-mask {
-  border-color: transparent;
-}
-.todo-list li.danger label .checkbox-mask:after {
-  content: "\f00c";
-  font-family: "FontAwesome";
-  display: block;
-  position: absolute;
-  top: -3px;
-  left: 0;
-}
-.todo-list li .checkbox {
-  margin: 0;
-  padding: 10px 15px;
-  border-radius: 5px;
-}
-.todo-list li label {
-  display: block;
-  padding-right: 10px;
-}
-.todo-list li label input[type="checkbox"] {
-  visibility: hidden;
-}
-.todo-list li label .checkbox-mask {
-  display: block;
-  border: 2px solid #666;
-  width: 12px;
-  height: 12px;
-  border-radius: 2.5px;
-  position: absolute;
-  margin-left: -20px;
-  margin-top: 4px;
-}
-.todo-list li .close {
-  display: none;
-  position: absolute;
-  width: 12px;
-  height: 16px;
-  top: 50%;
-  margin-top: -8px;
-  right: 10px;
-  font-size: 16px;
-}
-.todo-list li .close .fa {
-  line-height: 16px;
-}
-.todo-list li:hover .close {
-  display: block;
-}
-.has-feedback .fa {
-  line-height: 35px;
-  cursor: pointer;
-  pointer-events: auto;
-  z-index: 10;
-  display: block;
-  color: #666;
-  -webkit-transition: color 0.15s linear;
-  transition: color 0.15s linear;
-}
-.has-feedback .fa:hover {
-  color: #999;
-}
-.add-control {
-  margin-top: 20px;
-  position: relative;
-}
-.add-control .form-control {
-  padding-right: 25px;
-}
-.add-control .refresh {
-  position: absolute;
-  top: 8px;
-  right: 0;
-  font-size: 14px;
-  -webkit-transform: translateX(100%);
-  transform: translateX(100%);
-  margin-right: -10px;
-  cursor: pointer;
-  color: #9da1af;
-  -webkit-transition: color 0.15s linear;
-  transition: color 0.15s linear;
-}
-.add-control .refresh:hover {
-  color: #666;
-}
-.form-control,
-.form-control:focus,
-.form-control:active,
-.form-control:active:focus {
-  border: none;
-  padding: 10px 15px;
-  outline: none;
-}
-.form-control {
-  -webkit-box-shadow: none;
-  box-shadow: none;
-  -webkit-transition: all 0.2s linear;
-  transition: all 0.2s linear;
-}
-.form-control:focus {
-  -webkit-box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
-}
-.separator {
-  margin: 15px auto;
-  width: 50%;
-  height: 1px;
-}
-.animated {
-  -webkit-animation-duration: 0.45s;
-  animation-duration: 0.45s;
-  -webkit-animation-fill-mode: both;
-  animation-fill-mode: both;
-}
-.animated.fast {
-  -webkit-animation-duration: 0.25s;
-  animation-duration: 0.25s;
-}
-
-.today {
-  text-align: center;
-  color: #fff;
-}
-
-.zero {
-  top: 8px;
-  right: 0;
-  font-size: 14px;
-  -webkit-transform: translateX(100%);
-  transform: translateX(100%);
-  margin-right: -10px;
-  cursor: pointer;
-  color: #9da1af;
-  -webkit-transition: color 0.15s linear;
-  transition: color 0.15s linear;
-}
-
-p {
-  margin: 15px 0 10px;
-  font-size: 46px;
-  font-weight: 700;
-  color: #fff;
-}
-
-.fa-ban:before {
-  content: "\f05e";
-  color: #8c8c8c;
-  font-size: 29px;
-}
 
 .logo {
-  text-align: center;
-  margin-top: 30px;
-  margin-bottom: -50px;
+  margin-top: 2em;
 }
 
-.h4,
-h4 {
-  font-size: 16px;
-  color: #fff;
-  text-align: center;
-  margin-top: 40px;
+.todo-list {
+  margin-top: 1.5em;
 }
 
-a:focus,
-a:hover {
-  color: #fbfbfb;
-  text-decoration: none;
-}
-
-.fa-remove:before,
-.fa-close:before,
-.fa-times:before {
-  content: "\f00d";
-  color: #000;
-}
-
-@media (max-width: 768px) {
-  .col-xs-offset-3 {
-    margin-left: 10%;
-  }
-}
-
-@media (max-width: 768px) {
-  .col-xs-6 {
-    width: 80%;
-  }
-}
-@viewport {
-  width: device-width;
-  zoom: 1;
-}
-
-@media (min-width: 992px) {
-  .container {
-    width: 100%;
-    max-width: 1150px;
-  }
-}
-
-@media (max-width: 680px) {
-  svg {
-    width: 70px;
-    height: 70px;
-  }
-}
-
-.todo-list input[type="checkbox"] {
-  opacity: 0;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-.item{
-  min-height: 70px;
+.item {
+  min-height: 40px;
   display: flex;
   align-items: center;
-  border-bottom: 1px solid white;
-
+  padding: 0.3em;
 }
 
-.item:last-child{
+.item:first-child {
+  margin-top: 2em;
+}
+
+.item:last-child {
   border-bottom: 0;
 }
 
+h1 {
+  color: #fff;
+  margin: 2em 0 1.5em 0;
+}
 
-
-p{
+p {
   margin: 0;
-  padding: 20px;
+  padding: 15px;
   font-size: 20px;
   font-weight: 200;
   color: #fff;
 }
 
-
-button{
-    min-height: 24px;
-    width: 40px;
-    border-radius: 50%;
-    border-color: transparent;
-    background-color: #fff;
-    color: #000;
-    font-size: 30px;
-    padding-bottom: 0px;
-    border-width: 0;
-    margin-left: 10px;
+button {
+  min-height: 24px;
+  width: 40px;
+  border-radius: 50%;
+  border-color: transparent;
+  background-color: #fff;
+  color: #000;
+  font-size: 30px;
+  padding-bottom: 0px;
+  border-width: 0;
+  margin-left: 10px;
 }
 
-input[type = "chekbox"]{
-  margin: 20px;
+.list {
+  display: grid;
+  justify-content: center;
 }
 
-input:checked+p{
-  text-decoration: line-through;
-  text-decoration-color: black;
+.logo,
+.tcontainer {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+/* Hide the default checkbox */
+.container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+  border-radius: 5px;
+}
+
+.container {
+  display: block;
+  position: relative;
+  cursor: pointer;
+  font-size: 20px;
+  user-select: none;
+  border-radius: 5px;
+  box-shadow: 2px 2px 0px rgb(183, 183, 183);
+}
+
+/* Create a custom checkbox */
+.checkmark {
+  position: relative;
+  top: 0;
+  left: 0;
+  height: 1.3em;
+  width: 1.3em;
+  background-color: #ccc;
+  border-radius: 5px;
+}
+
+/* When the checkbox is checked, add a blue background */
+.container input:checked ~ .checkmark {
+  box-shadow: 3px 3px 0px rgb(183, 183, 183);
+  transition: all 0.2s;
+  opacity: 1;
+  background-image: linear-gradient(
+    45deg,
+    rgb(100, 61, 219) 0%,
+    rgb(217, 21, 239) 100%
+  );
+}
+
+.container input ~ .checkmark {
+  transition: all 0.2s;
+  opacity: 1;
+  box-shadow: 1px 1px 0px rgb(183, 183, 183);
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  opacity: 0;
+  transition: all 0.2s;
+}
+
+/* Show the checkmark when checked */
+.container input:checked ~ .checkmark:after {
+  opacity: 1;
+  transition: all 0.2s;
+}
+
+/* Style the checkmark/indicator */
+.container .checkmark:after {
+  left: 0.45em;
+  top: 0.25em;
+  width: 0.25em;
+  height: 0.5em;
+  border: solid white;
+  border-width: 0 0.15em 0.15em 0;
+  transform: rotate(45deg);
+}
+
+/* Input */
+
+.form {
+  --width-of-input: 200px;
+  --border-height: 1px;
+  --border-before-color: rgba(221, 221, 221, 0.39);
+  --border-after-color: #5891ff;
+  --input-hovered-color: #4985e01f;
+  position: relative;
+  width: var(--width-of-input);
+}
+/* styling of Input */
+.input {
+  color: #fff;
+  font-size: 1rem;
+  background-color: transparent;
+  width: 100%;
+  height: 3.5em;
+  box-sizing: border-box;
+  padding-inline: 0.5em;
+  padding-block: 0.7em;
+  border: none;
+  border-bottom: var(--border-height) solid var(--border-before-color);
+}
+/* styling of animated border */
+.input-border {
+  position: absolute;
+  background: var(--border-after-color);
+  width: 0%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  transition: 0.3s;
+}
+/* Hover on Input */
+input:hover {
+  background: var(--input-hovered-color);
+}
+
+input:focus {
+  outline: none;
+}
+/* here is code of animated border */
+input:focus ~ .input-border {
+  width: 100%;
+}
+
+/* Button */
+
+.icon-btn {
+  width: 50px;
+  height: 50px;
+  border: 1px solid #cdcdcd;
+  background: white;
+  border-radius: 25px;
+  overflow: hidden;
+  position: relative;
+  transition: width 0.2s ease-in-out;
+  font-weight: 500;
+  font-family: inherit;
+  font-size: 0.9rem;
+}
+
+.add-btn:hover {
+  width: 120px;
+}
+
+.add-btn::before,
+.add-btn::after {
+  transition: width 0.2s ease-in-out, border-radius 0.2s ease-in-out;
+  content: "";
+  position: absolute;
+  height: 4px;
+  width: 10px;
+  top: calc(50% - 2px);
+  background: #3f04ea;
+}
+
+.add-btn::after {
+  right: 14px;
+  overflow: hidden;
+  border-top-right-radius: 2px;
+  border-bottom-right-radius: 2px;
+}
+
+.add-btn::before {
+  left: 14px;
+  border-top-left-radius: 2px;
+  border-bottom-left-radius: 2px;
+}
+
+.icon-btn:focus {
+  outline: none;
+}
+
+.btn-txt {
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+
+.add-btn:hover::before,
+.add-btn:hover::after {
+  width: 3px;
+  border-radius: 2px;
+}
+
+.add-btn:hover .btn-txt {
+  opacity: 1;
+}
+
+.add-icon::after,
+.add-icon::before {
+  transition: all 0.2s ease-in-out;
+  content: "";
+  position: absolute;
+  height: 20px;
+  width: 2px;
+  top: calc(50% - 10px);
+  background: #3f04ea;
+  overflow: hidden;
+}
+
+.add-icon::before {
+  left: 22px;
+  border-top-left-radius: 2px;
+  border-bottom-left-radius: 2px;
+}
+
+.add-icon::after {
+  right: 22px;
+  border-top-right-radius: 2px;
+  border-bottom-right-radius: 2px;
+}
+
+.add-btn:hover .add-icon::before {
+  left: 15px;
+  height: 4px;
+  top: calc(50% - 2px);
+}
+
+.add-btn:hover .add-icon::after {
+  right: 15px;
+  height: 4px;
+  top: calc(50% - 2px);
 }

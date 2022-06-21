@@ -4,11 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Static Template</title>
-
-    <link rel='stylesheet prefetch' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css'>
-    <link rel='stylesheet prefetch' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css'>
-
+    <title>ToDo App</title>
 
     <link rel="stylesheet" href=" styles.css" />
   </head>
@@ -183,36 +179,45 @@
       </svg>
     </div>
 
+    <!-- Main Body -->
+
     <div class="body">
-        <div class="container">
-           <div class="today"></div>
-           <div class="row">
-              <div class="col-md-4 col-md-offset-4 col-xs-6 col-xs-offset-3">
+        <div class="tcontainer">
+           <div>
+             
 
+                <h1><%= message %>!</h1>
 
-                <h1> <%= message %> !</h1>
+                <div class="list">
 
-
-                 <div class="add-control">
-                    <div class="form-group has-feedback">
+                    <div class>
                       <form class="item" action="/" method="post">
-                       <input type="text" name="newTask" class="form-control" placeholder="✍️ Add item..."/>
-
-                       <button type="submit" name="buuton">+</button>
+                       <div class="form">
+                          <input class="input" name="newTask" placeholder="✍️ Add New Item..." required="" type="text" autocomplete="off" autofocus>
+                          <span class="input-border"></span>
+                        </div>
+                       <button class="icon-btn add-btn" type="submit" name="button">
+                          <div class="add-icon"></div>
+                          <div class="btn-txt">Add Item</div>
+                      </button>
                       </form>
                     </div>
-                 </div>
-                 <p class="err text-danger text-center hidden"><i class="fa fa-warning"></i> Oops! Please, enter name item</p>
-                 <p class="no-items text-muted text-center hidden"><i class="fa fa-ban"></i></p>
-
+                    <div class="todo-list">
                  <% for(item of newItem){ %>
                     <div class="item todo">
-                        <input type="checkbox" >
+                          <!--  -->
+                          <label class="container">
+                              <input type="checkbox">
+                              <div class="checkmark"></div>
+                            </label>
+                            <!--  -->
                         <p> <%= item %> </p>
                       </div>
                  <% } %>
 
+                </div>
               </div>
+            
            </div>
         </div>
         
